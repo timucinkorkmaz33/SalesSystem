@@ -1,0 +1,978 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{75B82991-209E-4E85-B4C7-2DE70C531774}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HizliSatis</RootNamespace>
+    <AssemblyName>HizliSatis</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.BonusSkins.v15.1" />
+    <Reference Include="DevExpress.Data.v15.1" />
+    <Reference Include="DevExpress.Office.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v15.1" />
+    <Reference Include="DevExpress.Sparkline.v15.1.Core" />
+    <Reference Include="DevExpress.Xpo.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v15.1" />
+    <Reference Include="DevExpress.XtraGauges.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v15.1.Win, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AyarlarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AyarlarForm.Designer.cs">
+      <DependentUpon>AyarlarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ButonBilgileri.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ButonBilgileri.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ButonSilmeFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ButonSilmeFormu.Designer.cs">
+      <DependentUpon>ButonSilmeFormu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CarihesaplarDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarihesaplarDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CarilerDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarilerDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CariListeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CariListeForm.Designer.cs">
+      <DependentUpon>CariListeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Carilisteler.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Carilisteler.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Caripersoneldataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Caripersoneldataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CariSepetler.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CariSepetler.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CariSepetleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CariSepetleri.Designer.cs">
+      <DependentUpon>CariSepetleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connection\AppSetting.cs" />
+    <Compile Include="Connection\SqlHelper.cs" />
+    <Compile Include="DatabaseAyari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatabaseAyari.Designer.cs">
+      <DependentUpon>DatabaseAyari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseAyariHizli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatabaseAyariHizli.Designer.cs">
+      <DependentUpon>DatabaseAyariHizli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Depolardataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Depolardataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\Ayarlar.cs" />
+    <Compile Include="Entity\ButonKisayolBilgileri.cs" />
+    <Compile Include="Entity\CariSepet.cs" />
+    <Compile Include="Entity\Evrak_Bilgisi.cs" />
+    <Compile Include="Entity\KullaniciBilgileri.cs" />
+    <Compile Include="Entity\RolTanimlari.cs" />
+    <Compile Include="Entity\Satis.cs" />
+    <Compile Include="Entity\SatisEnt.cs" />
+    <Compile Include="Entity\Sepet.cs" />
+    <Compile Include="Entity\Tahsilat.cs" />
+    <Compile Include="FiyatGor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FiyatGor.Designer.cs">
+      <DependentUpon>FiyatGor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GunlukTahsilatlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GunlukTahsilatlar.Designer.cs">
+      <DependentUpon>GunlukTahsilatlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HizliSatisDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HizliSatisDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="KasalaeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KasalaeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="KisayolEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KisayolEkle.Designer.cs">
+      <DependentUpon>KisayolEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KullaniciDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KullaniciDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="KulllaniciEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KulllaniciEkle.Designer.cs">
+      <DependentUpon>KulllaniciEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Licence\Licence.cs" />
+    <Compile Include="LisansForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LisansForm.Designer.cs">
+      <DependentUpon>LisansForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MikroDB_V15_KOZYENIDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MikroDB_V15_KOZYENIDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="model2\BARKOD_TANIMLARI.cs" />
+    <Compile Include="model2\Model1.cs" />
+    <Compile Include="model2\STOKLAR.cs" />
+    <Compile Include="model2\STOK_SATIS_FIYAT_LISTELERI.cs" />
+    <Compile Include="Model\ADAY_CARI_HESAPLAR.cs" />
+    <Compile Include="Model\ALINAN_TEKLIFLER.cs" />
+    <Compile Include="Model\ARIZA_GRUPLARI.cs" />
+    <Compile Include="Model\ARIZA_SINIFLARI.cs" />
+    <Compile Include="Model\ASORTI_TANIMLARI.cs" />
+    <Compile Include="Model\ASORTI_TANIM_KODLARI.cs" />
+    <Compile Include="Model\ATIK_MUHASEBE_GRUPLARI.cs" />
+    <Compile Include="Model\AVMCIRO_TANIMLARI.cs" />
+    <Compile Include="Model\AVMKAPI_HAREKETLERI.cs" />
+    <Compile Include="Model\AVMKAPI_TANIMLARI.cs" />
+    <Compile Include="Model\AVMKIRA_ARTISLARI.cs" />
+    <Compile Include="Model\AVMKIRA_ODEMELERI.cs" />
+    <Compile Include="Model\AVMKIRA_TANIMLARI.cs" />
+    <Compile Include="Model\AVM_CARI_HASILAT_HAREKETLERI.cs" />
+    <Compile Include="Model\AVM_CIRO_HAREKETLERI.cs" />
+    <Compile Include="Model\AVM_SAYACLARI.cs" />
+    <Compile Include="Model\AVM_SAYAC_HAREKETLERI.cs" />
+    <Compile Include="Model\BAGIMSIZ_BOLUM_TANIMLARI.cs" />
+    <Compile Include="Model\BAKIM_HAREKETLERI.cs" />
+    <Compile Include="Model\BAKIM_KABUL_HAREKETLERI.cs" />
+    <Compile Include="Model\BAKIM_PDI_TANIMLARI.cs" />
+    <Compile Include="Model\BAKIM_SARFIYATLARI.cs" />
+    <Compile Include="Model\BAKIM_SOZLESME_HAREKETLERI.cs" />
+    <Compile Include="Model\BANKALAR.cs" />
+    <Compile Include="Model\BARKOD_ETIKET_TANIMLARI.cs" />
+    <Compile Include="Model\BARKOD_TANIMLARI.cs" />
+    <Compile Include="Model\BEDEN_HAREKETLERI.cs" />
+    <Compile Include="Model\BLOK_TANIMLARI.cs" />
+    <Compile Include="Model\BUTCELENEN_NAKIT_AKIS.cs" />
+    <Compile Include="Model\BUTCE_DETAY.cs" />
+    <Compile Include="Model\BUTCE_MASTER.cs" />
+    <Compile Include="Model\CARI_DAGITIM_ANAHTARLARI.cs" />
+    <Compile Include="Model\CARI_DEGERLENDIRME_FORMU.cs" />
+    <Compile Include="Model\CARI_EVRAKFORMLARI.cs" />
+    <Compile Include="Model\CARI_HAREKETLER_SATIS_MALIYETLERI.cs" />
+    <Compile Include="Model\CARI_HAREKET_BORC_ALACAK_ESLEME.cs" />
+    <Compile Include="Model\CARI_HAREKET_ODEME_VADELERI.cs" />
+    <Compile Include="Model\CARI_HESAPLAR.cs" />
+    <Compile Include="Model\CARI_HESAP_ADRESLERI.cs" />
+    <Compile Include="Model\CARI_HESAP_BOLGELERI.cs" />
+    <Compile Include="Model\CARI_HESAP_GRUPLARI.cs" />
+    <Compile Include="Model\CARI_HESAP_HAREKETLERI.cs" />
+    <Compile Include="Model\CARI_HESAP_HAREKETLERI_EK.cs" />
+    <Compile Include="Model\CARI_HESAP_HAREKETLERI_OZET.cs" />
+    <Compile Include="Model\CARI_HESAP_SOZLESMELERI.cs" />
+    <Compile Include="Model\CARI_HESAP_TASIT_PLAKALARI.cs" />
+    <Compile Include="Model\CARI_HESAP_TEMINATLARI.cs" />
+    <Compile Include="Model\CARI_HESAP_YETKILILERI.cs" />
+    <Compile Include="Model\CARI_MUSTAHSIL_TANIMLARI.cs" />
+    <Compile Include="Model\CARI_PERFORMANS_KRITERLERI.cs" />
+    <Compile Include="Model\CARI_PERSONEL_TANIMLARI.cs" />
+    <Compile Include="Model\CEKI_LISTESI.cs" />
+    <Compile Include="Model\CIHAZ_DURUMLARI.cs" />
+    <Compile Include="Model\CIHAZ_GRUPLARI.cs" />
+    <Compile Include="Model\CIHAZ_HAREKETLERI.cs" />
+    <Compile Include="Model\CIHAZ_SORUNLARI.cs" />
+    <Compile Include="Model\CIRO_PRIMLERI.cs" />
+    <Compile Include="Model\CIRO_PRIM_KRITERLERI.cs" />
+    <Compile Include="Model\COZGU_ATKI_TANIMLARI.cs" />
+    <Compile Include="Model\DAGITIM_ANAHTARI_TANIMLARI.cs" />
+    <Compile Include="Model\DAGITIM_KONTROL.cs" />
+    <Compile Include="Model\DEMIRBASLAR.cs" />
+    <Compile Include="Model\DEMIRBAS_GRUPLARI.cs" />
+    <Compile Include="Model\DEMIRBAS_MALIYIL_TANIMLARI.cs" />
+    <Compile Include="Model\DEPARTMANLAR.cs" />
+    <Compile Include="Model\DEPOLAR.cs" />
+    <Compile Include="Model\DEPOLAR_ARASI_SIPARISLER.cs" />
+    <Compile Include="Model\DEPO_GRUPLARI.cs" />
+    <Compile Include="Model\DIIB_DETAYLARI.cs" />
+    <Compile Include="Model\DIIB_RECETELERI.cs" />
+    <Compile Include="Model\DIIB_TANIMLARI.cs" />
+    <Compile Include="Model\DOKUMA_DESEN_TANIMLARI.cs" />
+    <Compile Include="Model\DONEMLERE_YAYILAN_HIZMETLER.cs" />
+    <Compile Include="Model\EBELGE_EVRAK_HAREKETLERI.cs" />
+    <Compile Include="Model\EDI_TCGB_KALEMLERI.cs" />
+    <Compile Include="Model\EGITIM_ALT_GRUP_TANIMLARI.cs" />
+    <Compile Include="Model\EGITIM_DEVAM_KONTROL.cs" />
+    <Compile Include="Model\EGITIM_GRUP_TANIMLARI.cs" />
+    <Compile Include="Model\EGITIM_GRUP_TIPLERI.cs" />
+    <Compile Include="Model\EGITIM_KONU_TANIMLARI.cs" />
+    <Compile Include="Model\EKIP_TANIMLARI.cs" />
+    <Compile Include="Model\ETIKET.cs" />
+    <Compile Include="Model\ETIKETBAS.cs" />
+    <Compile Include="Model\EVRAK_ACIKLAMALARI.cs" />
+    <Compile Include="Model\EVRAK_BELGE_RESIMLERI.cs" />
+    <Compile Include="Model\EVRAK_GENEL_PARAMETRELERI.cs" />
+    <Compile Include="Model\E_DEFTER_HAREKETLERI.cs" />
+    <Compile Include="Model\E_FATURA_DETAYLARI.cs" />
+    <Compile Include="Model\E_FATURA_ISLEMLERI.cs" />
+    <Compile Include="Model\E_FATURA_OPERASYON_LOGLARI.cs" />
+    <Compile Include="Model\E_FATURA_TANIMLARI.cs" />
+    <Compile Include="Model\E_FATURA_TEMEL_ITIRAZ.cs" />
+    <Compile Include="Model\FINANSAL_SOZLESMELER.cs" />
+    <Compile Include="Model\FINANSAL_SOZLESME_TAKSITLERI.cs" />
+    <Compile Include="Model\FIRMALAR.cs" />
+    <Compile Include="Model\FIRMA_KREDI_KARTI_TANIMLARI.cs" />
+    <Compile Include="Model\FIRMA_MALIYIL_BEYANNAME_PARAMETRELERI.cs" />
+    <Compile Include="Model\FIRMA_MALIYIL_BILGILERI.cs" />
+    <Compile Include="Model\FIRMA_MALIYIL_ISLETME_TANIMLARI.cs" />
+    <Compile Include="Model\FIRMA_MALIYIL_URETIM_PARAMETRELERI.cs" />
+    <Compile Include="Model\FIRMA_NACE_TANIMLARI.cs" />
+    <Compile Include="Model\FIRMA_SERBEST_HAREKET.cs" />
+    <Compile Include="Model\FIRMA_TEMSILCILERI.cs" />
+    <Compile Include="Model\GELIR_GIDER_TANIMLARI.cs" />
+    <Compile Include="Model\GIDER_KATILIM_SOZLESMELERI.cs" />
+    <Compile Include="Model\HATALI1.cs" />
+    <Compile Include="Model\HATALI2.cs" />
+    <Compile Include="Model\HESAP_MERKEZ_ANAHTAR_TANIMLARI.cs" />
+    <Compile Include="Model\HESAP_OZETI_ISLEM_KODLARI.cs" />
+    <Compile Include="Model\HIZMET_ALIS_SOZLESMELERI.cs" />
+    <Compile Include="Model\HIZMET_HESAPLARI.cs" />
+    <Compile Include="Model\HIZMET_MASRAF_GRUPLARI.cs" />
+    <Compile Include="Model\HIZMET_MASRAF_SINIFLARI.cs" />
+    <Compile Include="Model\HIZMET_MASRAF_TIPLERI.cs" />
+    <Compile Include="Model\HIZMET_SATIS_SOZLESMELERI.cs" />
+    <Compile Include="Model\IADE_TALEPLERI.cs" />
+    <Compile Include="Model\IHRACAAT_KREDILERI.cs" />
+    <Compile Include="Model\IHRACAT_DOSYALARI.cs" />
+    <Compile Include="Model\IK_FORMU.cs" />
+    <Compile Include="Model\IK_ISGORUSME.cs" />
+    <Compile Include="Model\IK_KRITER_GRUPLARI.cs" />
+    <Compile Include="Model\IK_KRITER_TANIMLARI.cs" />
+    <Compile Include="Model\ILISKILER.cs" />
+    <Compile Include="Model\IPTAL_NEDENLERI.cs" />
+    <Compile Include="Model\ISEMIRLERI.cs" />
+    <Compile Include="Model\ISEMRI_MALZEME_DURUMLARI.cs" />
+    <Compile Include="Model\ISEMRI_MUHASEBE_GRUPLARI.cs" />
+    <Compile Include="Model\ISEMRI_STOK_TUKETIMLERI.cs" />
+    <Compile Include="Model\ISLETME_HAREKETLERI.cs" />
+    <Compile Include="Model\ISLETME_HAREKET_DETAYI.cs" />
+    <Compile Include="Model\ISLETME_HESAP_PLANI.cs" />
+    <Compile Include="Model\ISMERKEZI_GRUPLARI.cs" />
+    <Compile Include="Model\ISTASYON_ADALARI.cs" />
+    <Compile Include="Model\ISTASYON_SAYACLARI.cs" />
+    <Compile Include="Model\ISTASYON_SAYAC_HAREKETLERI.cs" />
+    <Compile Include="Model\ISTASYON_SAYAC_HAREKET_DETAYLARI.cs" />
+    <Compile Include="Model\ISTASYON_VARDIYA_CALISANLARI.cs" />
+    <Compile Include="Model\ISTASYON_VARDIYA_SATISLARI.cs" />
+    <Compile Include="Model\ISTASYON_VARDIYA_TAHSILATLARI.cs" />
+    <Compile Include="Model\IS_ILANLARI.cs" />
+    <Compile Include="Model\IS_ILAN_DETAYLARI.cs" />
+    <Compile Include="Model\IS_MERKEZLERI.cs" />
+    <Compile Include="Model\ITHALAT_DOSYALARI.cs" />
+    <Compile Include="Model\ITHALAT_MUHASEBE_GRUPLARI.cs" />
+    <Compile Include="Model\KALIP_APARAT_TANIMLARI.cs" />
+    <Compile Include="Model\KAPAMA_NEDENLERI_TANIMLARI.cs" />
+    <Compile Include="Model\KARGO_GONDERILERI.cs" />
+    <Compile Include="Model\KARGO_TANIMLARI.cs" />
+    <Compile Include="Model\KASALAR.cs" />
+    <Compile Include="Model\KAT_TANIMLARI.cs" />
+    <Compile Include="Model\KIRALAMA_HAREKETLERI.cs" />
+    <Compile Include="Model\KIRALAMA_MMO_TANIMLARI.cs" />
+    <Compile Include="Model\KIRALAMA_SEVK_HAREKETLERI.cs" />
+    <Compile Include="Model\KIRALAMA_SOZLESMELERI.cs" />
+    <Compile Include="Model\KIRALAMA_TALEP_HAREKETLERI.cs" />
+    <Compile Include="Model\KIRALAMA_TEKLIF_HAREKETLERI.cs" />
+    <Compile Include="Model\KIRALAMA_TEKLIF_REVIZYONLARI.cs" />
+    <Compile Include="Model\KIRA_TANIMLARI.cs" />
+    <Compile Include="Model\KISA_MESAJ_SABLONLARI.cs" />
+    <Compile Include="Model\KONSINYE_HAREKETLERI.cs" />
+    <Compile Include="Model\KONSINYE_HAREKETLERI_OZET.cs" />
+    <Compile Include="Model\KREDI_KARTLARI.cs" />
+    <Compile Include="Model\KREDI_SOZLESMESI_TAKSIT_TANIMLARI.cs" />
+    <Compile Include="Model\KREDI_SOZLESMESI_TANIMLARI.cs" />
+    <Compile Include="Model\KULLANICI_ONAY_TANIMLARI.cs" />
+    <Compile Include="Model\MAKINALAR.cs" />
+    <Compile Include="Model\MAKINA_BAKIM_ISEMIRLERI.cs" />
+    <Compile Include="Model\MAKINA_GRUPLARI.cs" />
+    <Compile Include="Model\MAKINA_HAREKETLERI.cs" />
+    <Compile Include="Model\MAKINA_SORUNLARI.cs" />
+    <Compile Include="Model\MALI_TABLOLAR.cs" />
+    <Compile Include="Model\MASRAF_HESAPLARI.cs" />
+    <Compile Include="Model\MERKEZ.cs" />
+    <Compile Include="Model\MikroEnt.cs" />
+    <Compile Include="Model\MUHASEBE_FISLERI.cs" />
+    <Compile Include="Model\MUHASEBE_FISLERI_OZET.cs" />
+    <Compile Include="Model\MUHASEBE_FIS_DETAYLARI.cs" />
+    <Compile Include="Model\MUHASEBE_FIS_GRUBU_TANIMLARI.cs" />
+    <Compile Include="Model\MUHASEBE_HESAP_BUTCESI.cs" />
+    <Compile Include="Model\MUHASEBE_HESAP_GRUPLARI.cs" />
+    <Compile Include="Model\MUHASEBE_HESAP_PLANI.cs" />
+    <Compile Include="Model\MUHTASAR_GRUPLARI.cs" />
+    <Compile Include="Model\MULTIKOD_TANIMLARI.cs" />
+    <Compile Include="Model\mye_AttachedFiles.cs" />
+    <Compile Include="Model\mye_CubeItems.cs" />
+    <Compile Include="Model\mye_Cubes.cs" />
+    <Compile Include="Model\mye_Favorites.cs" />
+    <Compile Include="Model\mye_ImageData.cs" />
+    <Compile Include="Model\mye_OnlineData.cs" />
+    <Compile Include="Model\mye_OnlineImageData.cs" />
+    <Compile Include="Model\mye_OnlineTextData.cs" />
+    <Compile Include="Model\mye_OnlineUserData.cs" />
+    <Compile Include="Model\mye_OnlineUserDataScheme.cs" />
+    <Compile Include="Model\mye_PlanImages.cs" />
+    <Compile Include="Model\mye_PlanPins.cs" />
+    <Compile Include="Model\mye_TableFilters.cs" />
+    <Compile Include="Model\mye_TextData.cs" />
+    <Compile Include="Model\mye_UserDataScheme.cs" />
+    <Compile Include="Model\NAKAKSRV.cs" />
+    <Compile Include="Model\NAKIT_AKIS_TABLOSU.cs" />
+    <Compile Include="Model\ODEME_EMIRLERI.cs" />
+    <Compile Include="Model\ODEME_EMRI_ACILISLARI.cs" />
+    <Compile Include="Model\ODEME_LISTESI.cs" />
+    <Compile Include="Model\ODEME_PLANLARI.cs" />
+    <Compile Include="Model\OKC_HAREKETLERI.cs" />
+    <Compile Include="Model\ONAYLI_EVRAKLAR.cs" />
+    <Compile Include="Model\ONL_RED.cs" />
+    <Compile Include="Model\OPERASYON_MALIYET_DETAYLARI.cs" />
+    <Compile Include="Model\OPERASYON_RECETELERI.cs" />
+    <Compile Include="Model\OZEL_MAHSUP_DETAY_TANIMLARI.cs" />
+    <Compile Include="Model\PARTILOT.cs" />
+    <Compile Include="Model\PERIYODIK_EVRAKLAR.cs" />
+    <Compile Include="Model\PERSONELLER.cs" />
+    <Compile Include="Model\PERSONEL_AILE_TANIMLARI.cs" />
+    <Compile Include="Model\PERSONEL_ALINAN_EGITIMLER.cs" />
+    <Compile Include="Model\PERSONEL_AVANS_TALEPLERI.cs" />
+    <Compile Include="Model\PERSONEL_BASVURU_PUAN_DEGERLENDIRMELERI.cs" />
+    <Compile Include="Model\PERSONEL_BASVURU_PUAN_TANIMLARI.cs" />
+    <Compile Include="Model\PERSONEL_BELGE_DETAYLARI.cs" />
+    <Compile Include="Model\PERSONEL_BELGE_GRUPLARI.cs" />
+    <Compile Include="Model\PERSONEL_BELGE_TANIMLARI.cs" />
+    <Compile Include="Model\PERSONEL_BOLGELERI.cs" />
+    <Compile Include="Model\PERSONEL_BOLUM_TANIMLARI.cs" />
+    <Compile Include="Model\PERSONEL_CALISMA_TANIMLARI.cs" />
+    <Compile Include="Model\PERSONEL_DEVAM_KONTROL.cs" />
+    <Compile Include="Model\PERSONEL_DEVAM_KONTROL_NEDENLERI.cs" />
+    <Compile Include="Model\PERSONEL_EGITIM_DETAYLARI.cs" />
+    <Compile Include="Model\PERSONEL_EGITIM_SINAVLARI.cs" />
+    <Compile Include="Model\PERSONEL_EGITIM_TALEPLERI.cs" />
+    <Compile Include="Model\PERSONEL_EGITIM_TANIMLARI.cs" />
+    <Compile Include="Model\PERSONEL_EGITIM_YERI_TANIMLARI.cs" />
+    <Compile Include="Model\PERSONEL_EGITMENLERI.cs" />
+    <Compile Include="Model\PERSONEL_EKKAZANC_TANIMLARI.cs" />
+    <Compile Include="Model\PERSONEL_GIRILEN_SINAVLAR.cs" />
+    <Compile Include="Model\PERSONEL_GOREV_TANIMLARI.cs" />
+    <Compile Include="Model\PERSONEL_ICRA_ODEMELERI.cs" />
+    <Compile Include="Model\PERSONEL_ICRA_TANIMLARI.cs" />
+    <Compile Include="Model\PERSONEL_IS_BASVURULARI.cs" />
+    <Compile Include="Model\PERSONEL_IS_GRUP_TANIMLARI.cs" />
+    <Compile Include="Model\PERSONEL_IZINLERI.cs" />
+    <Compile Include="Model\PERSONEL_IZIN_TALEPLERI.cs" />
+    <Compile Include="Model\PERSONEL_KADRO_CALISANLARI.cs" />
+    <Compile Include="Model\PERSONEL_KADRO_EGITIMLERI.cs" />
+    <Compile Include="Model\PERSONEL_KADRO_LIMITLERI.cs" />
+    <Compile Include="Model\PERSONEL_KADRO_NITELIKLERI.cs" />
+    <Compile Include="Model\PERSONEL_KADRO_PERFORMANSLARI.cs" />
+    <Compile Include="Model\PERSONEL_KADRO_SORUMLULUKLARI.cs" />
+    <Compile Include="Model\PERSONEL_KADRO_TANIMLARI.cs" />
+    <Compile Include="Model\PERSONEL_KADRO_TARIHCESI.cs" />
+    <Compile Include="Model\PERSONEL_KADRO_YETKILERI.cs" />
+    <Compile Include="Model\PERSONEL_MUHASEBE_GRUPLARI.cs" />
+    <Compile Include="Model\PERSONEL_NITELIKLERI.cs" />
+    <Compile Include="Model\PERSONEL_NITELIK_TANIMLARI.cs" />
+    <Compile Include="Model\PERSONEL_PERFORMANSLAR.cs" />
+    <Compile Include="Model\PERSONEL_PERFORMANS_TANIMLARI.cs" />
+    <Compile Include="Model\PERSONEL_PRIM_DAGITIM_TANIMLARI.cs" />
+    <Compile Include="Model\PERSONEL_SINAV_GRUPLARI.cs" />
+    <Compile Include="Model\PERSONEL_SINAV_LISTESI.cs" />
+    <Compile Include="Model\PERSONEL_SINAV_SORULARI.cs" />
+    <Compile Include="Model\PERSONEL_SINAV_SORU_TANIMLARI.cs" />
+    <Compile Include="Model\PERSONEL_SINAV_TANIMLARI.cs" />
+    <Compile Include="Model\PERSONEL_SORUMLULUK_TANIMLARI.cs" />
+    <Compile Include="Model\PERSONEL_SOSYALYARDIM_TANIMLARI.cs" />
+    <Compile Include="Model\PERSONEL_SSK_TANIMLARI.cs" />
+    <Compile Include="Model\PERSONEL_TAHAKKUKLARI.cs" />
+    <Compile Include="Model\PERSONEL_TAHAKKUKLARI_SIMULATOR.cs" />
+    <Compile Include="Model\PERSONEL_TAHAKKUK_OZETLERI.cs" />
+    <Compile Include="Model\PERSONEL_TAHAKKUK_OZETLERI_SIMULATOR.cs" />
+    <Compile Include="Model\PERSONEL_TALEPLERI.cs" />
+    <Compile Include="Model\PERSONEL_UNVAN_TANIMLARI.cs" />
+    <Compile Include="Model\PERSONEL_YETKI_TANIMLARI.cs" />
+    <Compile Include="Model\POSHATA.cs" />
+    <Compile Include="Model\POS_ODEME_TANIMLARI.cs" />
+    <Compile Include="Model\POS_SOZLESME_TANIMLARI.cs" />
+    <Compile Include="Model\POZISYON_BAYRAKLARI.cs" />
+    <Compile Include="Model\PROFORMA_FIYAT_DEGISIKLIKLERI.cs" />
+    <Compile Include="Model\PROFORMA_SATINALMA_SARTLARI.cs" />
+    <Compile Include="Model\PROFORMA_SIPARISLER.cs" />
+    <Compile Include="Model\PROGRAM_LOGLARI.cs" />
+    <Compile Include="Model\PROJELER.cs" />
+    <Compile Include="Model\PROMOPUAN_TANIMLARI.cs" />
+    <Compile Include="Model\PROMOSYON_HAREKETLERI.cs" />
+    <Compile Include="Model\PROMOSYON_TANIMLARI.cs" />
+    <Compile Include="Model\PUAN_HEDIYE_CEKI_HAREKETLERI.cs" />
+    <Compile Include="Model\RAF_ADRESLERI.cs" />
+    <Compile Include="Model\RAKIP_STOKLAR.cs" />
+    <Compile Include="Model\RAKIP_STOK_DEPO_DETAYLARI.cs" />
+    <Compile Include="Model\rb_folder.cs" />
+    <Compile Include="Model\rb_item.cs" />
+    <Compile Include="Model\RECETE_KRITERLERI.cs" />
+    <Compile Include="Model\SATINALMA_SARTLARI.cs" />
+    <Compile Include="Model\SATINALMA_TALEPLERI.cs" />
+    <Compile Include="Model\SATIS_SARTLARI.cs" />
+    <Compile Include="Model\SAYIM_SONUCLARI.cs" />
+    <Compile Include="Model\SELF.cs" />
+    <Compile Include="Model\SERVIS_HAREKETLERI.cs" />
+    <Compile Include="Model\SERVIS_ISEMIRLERI.cs" />
+    <Compile Include="Model\SERVIS_MALZEME_PLANLARI.cs" />
+    <Compile Include="Model\SERVIS_ROTA_PLANLARI.cs" />
+    <Compile Include="Model\SHOP_PROMOSYON_KONTROL.cs" />
+    <Compile Include="Model\SHOP_PROMOSYON_SORGULARI.cs" />
+    <Compile Include="Model\SHOP_PROMOSYON_TANIMLARI.cs" />
+    <Compile Include="Model\SHOP_PROMOSYON_UYGULAMA_TANIMLARI.cs" />
+    <Compile Include="Model\SIKAYET_TANIMLARI.cs" />
+    <Compile Include="Model\SIPARISLER.cs" />
+    <Compile Include="Model\SIPARISLER_OZET.cs" />
+    <Compile Include="Model\SIPARIS_ESLEME.cs" />
+    <Compile Include="Model\SITE_TANIMLARI.cs" />
+    <Compile Include="Model\SON_KULLANICILAR.cs" />
+    <Compile Include="Model\SORUMLULUK_MERKEZLERI.cs" />
+    <Compile Include="Model\STOKLAR.cs" />
+    <Compile Include="Model\STOK_ALTERNATIFLERI.cs" />
+    <Compile Include="Model\STOK_ALT_GRUPLARI.cs" />
+    <Compile Include="Model\STOK_AMBALAJLARI.cs" />
+    <Compile Include="Model\STOK_ANAHAMMADDELERI.cs" />
+    <Compile Include="Model\STOK_ANA_GRUPLARI.cs" />
+    <Compile Include="Model\STOK_BAG_TANIMLARI.cs" />
+    <Compile Include="Model\STOK_BEDEN_TANIMLARI.cs" />
+    <Compile Include="Model\STOK_CARI_ISKONTO_TANIMLARI.cs" />
+    <Compile Include="Model\STOK_CARI_KAMPANYA_TANIMLARI.cs" />
+    <Compile Include="Model\STOK_DEPO_DETAYLARI.cs" />
+    <Compile Include="Model\STOK_FIYAT_DEGISIKLIKLERI.cs" />
+    <Compile Include="Model\STOK_HAREKETLERI.cs" />
+    <Compile Include="Model\STOK_HAREKETLERINE_MALIYET_YANSITMA.cs" />
+    <Compile Include="Model\STOK_HAREKETLERI_EK.cs" />
+    <Compile Include="Model\STOK_HAREKETLERI_OZET.cs" />
+    <Compile Include="Model\STOK_HAREKET_MALIYET_DETAYLARI.cs" />
+    <Compile Include="Model\STOK_KALITE_KONTROL_TANIMLARI.cs" />
+    <Compile Include="Model\STOK_KALKON.cs" />
+    <Compile Include="Model\STOK_KATEGORILERI.cs" />
+    <Compile Include="Model\STOK_KOD_ALTERNATIFLERI.cs" />
+    <Compile Include="Model\STOK_MARKALARI.cs" />
+    <Compile Include="Model\STOK_MODEL_TANIMLARI.cs" />
+    <Compile Include="Model\STOK_MUHASEBE_GRUPLARI.cs" />
+    <Compile Include="Model\STOK_PAKET_TANIMLARI.cs" />
+    <Compile Include="Model\STOK_PRIM_TANIMLARI.cs" />
+    <Compile Include="Model\STOK_RENK_TANIMLARI.cs" />
+    <Compile Include="Model\STOK_REYONLARI.cs" />
+    <Compile Include="Model\STOK_REZERVASYONLARI.cs" />
+    <Compile Include="Model\STOK_SARF_RECETELERI.cs" />
+    <Compile Include="Model\STOK_SATIS_FIYAT_LISTELERI.cs" />
+    <Compile Include="Model\STOK_SATIS_FIYAT_LISTE_TANIMLARI.cs" />
+    <Compile Include="Model\STOK_SEKTORLERI.cs" />
+    <Compile Include="Model\STOK_SERINO_TANIMLARI.cs" />
+    <Compile Include="Model\STOK_URETICILERI.cs" />
+    <Compile Include="Model\STOK_YILSEZON_TANIMLARI.cs" />
+    <Compile Include="Model\SUBE.cs" />
+    <Compile Include="Model\SUBELER.cs" />
+    <Compile Include="Model\TAKVIMLER.cs" />
+    <Compile Include="Model\TAKVIM_VARDIYA_DETAYLARI.cs" />
+    <Compile Include="Model\TAMAMLAYICI_STOKLAR.cs" />
+    <Compile Include="Model\TEKLIF_TANIMLARI.cs" />
+    <Compile Include="Model\TEMEL_ROTALAR.cs" />
+    <Compile Include="Model\TEMEL_URUN_RECETELERI.cs" />
+    <Compile Include="Model\TEMP_WORKDATAFILE_O.cs" />
+    <Compile Include="Model\TEMP_WORKDATAFILE_S.cs" />
+    <Compile Include="Model\TESLIM_TURLERI.cs" />
+    <Compile Include="Model\TRANSFER_IRSALIYELERI.cs" />
+    <Compile Include="Model\TRANSFER_SIPARISLERI.cs" />
+    <Compile Include="Model\UFRS_CARI_HAREKET_DEGERLERI.cs" />
+    <Compile Include="Model\UFRS_FISLERI.cs" />
+    <Compile Include="Model\UFRS_SOZLESMELERI.cs" />
+    <Compile Include="Model\UFRS_STOK_DEGER_DUSUKLUGU.cs" />
+    <Compile Include="Model\UFRS_STOK_HAREKET_DEGERLERI.cs" />
+    <Compile Include="Model\URETIM_GECIKME_NEDENLERI.cs" />
+    <Compile Include="Model\URETIM_HATALARI.cs" />
+    <Compile Include="Model\URETIM_KOMBINE_HAMMADDE_HAREKETLERI.cs" />
+    <Compile Include="Model\URETIM_KOMBINE_URUN_HAREKETLERI.cs" />
+    <Compile Include="Model\URETIM_MALIYET_DEVIR.cs" />
+    <Compile Include="Model\URETIM_MALZEME_PLANLAMA.cs" />
+    <Compile Include="Model\URETIM_OPERASYONLARI.cs" />
+    <Compile Include="Model\URETIM_OPERASYON_CALISANLARI.cs" />
+    <Compile Include="Model\URETIM_OPERASYON_DETAYLARI.cs" />
+    <Compile Include="Model\URETIM_OPERASYON_GECIKMELERI.cs" />
+    <Compile Include="Model\URETIM_OPERASYON_HAREKETLERI.cs" />
+    <Compile Include="Model\URETIM_OPERASYON_HATALARI.cs" />
+    <Compile Include="Model\URETIM_PLAN_MATRISI.cs" />
+    <Compile Include="Model\URETIM_PLAN_MATRISI_DETAY.cs" />
+    <Compile Include="Model\URETIM_ROTA_PLANLARI.cs" />
+    <Compile Include="Model\URETIM_TALEPLERI.cs" />
+    <Compile Include="Model\URUNLER.cs" />
+    <Compile Include="Model\URUN_RECETELERI.cs" />
+    <Compile Include="Model\URUN_RECETE_REVIZYONLARI.cs" />
+    <Compile Include="Model\URUN_ROTALARI.cs" />
+    <Compile Include="Model\URUN_ROTA_DETAYLARI.cs" />
+    <Compile Include="Model\VARDIYALAR.cs" />
+    <Compile Include="Model\VERGI_FON_TANIMLARI.cs" />
+    <Compile Include="Model\VERGI_MUHASEBE_KODLARI.cs" />
+    <Compile Include="Model\VERGI_TAHAKKUKLARI.cs" />
+    <Compile Include="Model\VERILEN_TEKLIFLER.cs" />
+    <Compile Include="Model\VERI_TABANI_PARAMETRELERI.cs" />
+    <Compile Include="Model\YASAKLI_KAYITLAR.cs" />
+    <Compile Include="Model\YASAL_PARAMETRELER.cs" />
+    <Compile Include="Model\YATIRIM_TESVIKLERI.cs" />
+    <Compile Include="Model\YATIRIM_TESVIK_DETAYLARI.cs" />
+    <Compile Include="Model\YOLCU_TANIMLARI.cs" />
+    <Compile Include="Model\YUKLEME_KABUL.cs" />
+    <Compile Include="Model\YUKLEME_KABUL_DETAY.cs" />
+    <Compile Include="Model\ZIMMET_YERLERI.cs" />
+    <Compile Include="Model\ZIYARET_HAREKETLERI.cs" />
+    <Compile Include="OdemeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OdemeForm.Designer.cs">
+      <DependentUpon>OdemeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sifre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sifre.Designer.cs">
+      <DependentUpon>Sifre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StoklarDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StoklarDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="StokListeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StokListeForm.Designer.cs">
+      <DependentUpon>StokListeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TahsilatlarDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TahsilatlarDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\StokModelView.cs" />
+    <Compile Include="WaitForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitForm1.Designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AyarlarForm.resx">
+      <DependentUpon>AyarlarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ButonSilmeFormu.resx">
+      <DependentUpon>ButonSilmeFormu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CariListeForm.resx">
+      <DependentUpon>CariListeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CariSepetleri.resx">
+      <DependentUpon>CariSepetleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatabaseAyari.resx">
+      <DependentUpon>DatabaseAyari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatabaseAyariHizli.resx">
+      <DependentUpon>DatabaseAyariHizli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FiyatGor.resx">
+      <DependentUpon>FiyatGor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GunlukTahsilatlar.resx">
+      <DependentUpon>GunlukTahsilatlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KisayolEkle.resx">
+      <DependentUpon>KisayolEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KulllaniciEkle.resx">
+      <DependentUpon>KulllaniciEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LisansForm.resx">
+      <DependentUpon>LisansForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OdemeForm.resx">
+      <DependentUpon>OdemeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Sifre.resx">
+      <DependentUpon>Sifre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokListeForm.resx">
+      <DependentUpon>StokListeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ButonBilgileri.xsc">
+      <DependentUpon>ButonBilgileri.xsd</DependentUpon>
+    </None>
+    <None Include="ButonBilgileri.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ButonBilgileri.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ButonBilgileri.xss">
+      <DependentUpon>ButonBilgileri.xsd</DependentUpon>
+    </None>
+    <None Include="CarihesaplarDataset.xsc">
+      <DependentUpon>CarihesaplarDataset.xsd</DependentUpon>
+    </None>
+    <None Include="CarihesaplarDataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CarihesaplarDataset.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CarihesaplarDataset.xss">
+      <DependentUpon>CarihesaplarDataset.xsd</DependentUpon>
+    </None>
+    <None Include="CarilerDataSet.xsc">
+      <DependentUpon>CarilerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CarilerDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CarilerDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CarilerDataSet.xss">
+      <DependentUpon>CarilerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Carilisteler.xsc">
+      <DependentUpon>Carilisteler.xsd</DependentUpon>
+    </None>
+    <None Include="Carilisteler.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Carilisteler.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Carilisteler.xss">
+      <DependentUpon>Carilisteler.xsd</DependentUpon>
+    </None>
+    <None Include="Caripersoneldataset.xsc">
+      <DependentUpon>Caripersoneldataset.xsd</DependentUpon>
+    </None>
+    <None Include="Caripersoneldataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Caripersoneldataset.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Caripersoneldataset.xss">
+      <DependentUpon>Caripersoneldataset.xsd</DependentUpon>
+    </None>
+    <None Include="CariSepetler.xsc">
+      <DependentUpon>CariSepetler.xsd</DependentUpon>
+    </None>
+    <None Include="CariSepetler.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CariSepetler.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CariSepetler.xss">
+      <DependentUpon>CariSepetler.xsd</DependentUpon>
+    </None>
+    <None Include="Depolardataset.xsc">
+      <DependentUpon>Depolardataset.xsd</DependentUpon>
+    </None>
+    <None Include="Depolardataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Depolardataset.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Depolardataset.xss">
+      <DependentUpon>Depolardataset.xsd</DependentUpon>
+    </None>
+    <None Include="HizliSatisDataSet.xsc">
+      <DependentUpon>HizliSatisDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HizliSatisDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HizliSatisDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HizliSatisDataSet.xss">
+      <DependentUpon>HizliSatisDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="KasalaeDataSet.xsc">
+      <DependentUpon>KasalaeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="KasalaeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KasalaeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KasalaeDataSet.xss">
+      <DependentUpon>KasalaeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="KullaniciDataset.xsc">
+      <DependentUpon>KullaniciDataset.xsd</DependentUpon>
+    </None>
+    <None Include="KullaniciDataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KullaniciDataset.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KullaniciDataset.xss">
+      <DependentUpon>KullaniciDataset.xsd</DependentUpon>
+    </None>
+    <None Include="MikroDB_V15_KOZYENIDataSet.xsc">
+      <DependentUpon>MikroDB_V15_KOZYENIDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MikroDB_V15_KOZYENIDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MikroDB_V15_KOZYENIDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MikroDB_V15_KOZYENIDataSet.xss">
+      <DependentUpon>MikroDB_V15_KOZYENIDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="StoklarDataset.xsc">
+      <DependentUpon>StoklarDataset.xsd</DependentUpon>
+    </None>
+    <None Include="StoklarDataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StoklarDataset.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StoklarDataset.xss">
+      <DependentUpon>StoklarDataset.xsd</DependentUpon>
+    </None>
+    <None Include="TahsilatlarDataset.xsc">
+      <DependentUpon>TahsilatlarDataset.xsd</DependentUpon>
+    </None>
+    <None Include="TahsilatlarDataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TahsilatlarDataset.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TahsilatlarDataset.xss">
+      <DependentUpon>TahsilatlarDataset.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fullshopcart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clearshopcart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\odeme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marka_logo_200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main_bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main_bg1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marka_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eawe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="resimler\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\keyboard.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
